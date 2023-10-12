@@ -9,7 +9,7 @@ export default function Page() {
   const { golfer, error } = useGolfer(paramGolferId)
   let golferScores
   let golferName
-  
+
   if (golfer){
     golferScores = golfer,
     golferName = golfer[0].user_name

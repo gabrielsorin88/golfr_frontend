@@ -2,9 +2,6 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { getUsername } from '../lib/userAuth'
 
-
-
-
 const Layout = ({ children }) => {
   const [ username, setUsername ] = useState('')
   useEffect(() => setUsername(getUsername()), [])
@@ -33,6 +30,5 @@ const Layout = ({ children }) => {
     </>
   )
 }
-
 
 export default Layout

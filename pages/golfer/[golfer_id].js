@@ -3,17 +3,16 @@ import ScoreCard from '../../components/ScoreCard'
 import Layout from '../../components/Layout'
 import useGolfer from '../../lib/useGolfer'
 
-
-
 export default function Page() {
   const router = useRouter()
   const paramGolferId = router.query.golfer_id
   const { golfer, error } = useGolfer(paramGolferId)
   let golferScores
   let golferName
+  
   if (golfer){
-    golferScores = golfer.golfer_scores
-    golferName = golfer.golfer_name
+    golferScores = golfer,
+    golferName = golfer[0].user_name
   }
 
   return (
@@ -40,4 +39,3 @@ export default function Page() {
     </Layout>
   )
 }
-

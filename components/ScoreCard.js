@@ -14,7 +14,7 @@ const ScoreCard = ({ id, playedAt, totalScore, userId, userName }) => {
           {playedAt}
         </div>
         <div>
-          {`${userName} posted a score of ${totalScore}`}
+          <a href={`/golfer/${userId}`}>{userName}</a>{` posted a score of ${totalScore}`}
         </div>
       </div>
       <div className="w-1/6">
